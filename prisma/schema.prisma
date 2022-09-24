@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model leetcode {
+  id         Int     @id @default(autoincrement())
+  testcase   String? @db.VarChar(100)
+  solution   String? @db.VarChar(10000)
+  difficulty Int?
+  name       String? @db.VarChar(100)
+  problem    String? @db.VarChar(5000)
+}
