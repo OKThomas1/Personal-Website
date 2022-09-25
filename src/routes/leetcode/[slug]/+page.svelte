@@ -1,18 +1,20 @@
 <script>
 	export let data;
 	let testcase = data.testcase;
-	let output = '';
+	let output = "";
 
 	const runCode = () => {
-		let code = data.solution.split(' = ');
+		let code = data.solution.split(" = ");
 		code.shift();
-		code = code.join(' = ');
+		code = code.join(" = ");
 		code = code.substring(8);
 		try {
-			output = new Function('return function test' + code)()(...JSON.parse(`[${testcase}]`));
+			output = JSON.stringify(
+				new Function("return function test" + code)()(...JSON.parse(`[${testcase}]`))
+			);
 		} catch (err) {
 			console.error(err);
-			output = 'Error, make sure you entered the test case correctly.';
+			output = "Error, make sure you entered the test case correctly.";
 		}
 	};
 </script>
@@ -35,7 +37,7 @@
 		<pre>{data.solution}</pre>
 	</div>
 </div>
-{#if !data.name.includes('Design')}
+{#if !data.name.includes("Design")}
 	<form on:submit|preventDefault={runCode}>
 		<div class="mb-3">
 			<label for="testCase" class="form-label h4">Test Case:</label>

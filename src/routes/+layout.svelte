@@ -1,9 +1,10 @@
 <script>
-	import '../app.scss';
+	import "../app.scss";
+	import Nav from "./Nav.svelte";
 </script>
 
 <div id="parent">
-	<header><h1>Nav Bar probably (remove padding)</h1></header>
+	<header><Nav /></header>
 	<footer><h1>Links to socials probably</h1></footer>
 	<main>
 		<div class="container">
@@ -22,11 +23,7 @@
 		text-align: center;
 		padding-top: 50px;
 	}
-	header {
-		text-align: center;
-		padding-top: 30px;
-		padding-bottom: 30px;
-	}
+
 	#parent {
 		position: relative;
 		padding-bottom: 10rem;
