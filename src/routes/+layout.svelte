@@ -1,15 +1,13 @@
 <script>
 	import "../app.scss";
-	import Nav from "./Nav.svelte";
+	import Nav from "$lib/components/Nav.svelte";
 </script>
 
 <div id="parent">
 	<header><Nav /></header>
 	<footer><h1>Links to socials probably</h1></footer>
 	<main>
-		<div class="container">
-			<slot />
-		</div>
+		<slot />
 	</main>
 </div>
 
@@ -22,8 +20,8 @@
 		margin-top: 20px;
 		text-align: center;
 		padding-top: 50px;
+		z-index: 100;
 	}
-
 	#parent {
 		position: relative;
 		padding-bottom: 10rem;

@@ -30,6 +30,6 @@
 
 <style>
 	nav {
-		margin-bottom: 30px;
+		z-index: 100;
 	}
 </style>
