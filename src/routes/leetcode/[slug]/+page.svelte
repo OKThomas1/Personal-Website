@@ -29,28 +29,38 @@
 		<h3 class="text-center text-danger">Hard</h3>
 	{/if}
 	<div class="row mb-3">
-		<div class="col-md-6 border border-primary overflow-hidden">
+		<div class="col-md-6 bg-dark overflow-hidden p-4">
 			<h5>Problem:</h5>
 			{@html data.problem}
 		</div>
-		<div class="col-md-6 ">
+		<div class="col-md-6 p-4 border border-primary">
 			<h5>My Solution:</h5>
 			<pre>{data.solution}</pre>
 		</div>
 	</div>
-	{#if !data.name.includes("Design")}
-		<form on:submit|preventDefault={runCode}>
-			<div class="mb-3">
-				<label for="testCase" class="form-label h4">Test Case:</label>
-				<input type="text" class="form-control" id="testCase" bind:value={testcase} />
+	{#if !data.name.includes("Design") && data.testcase !== "false"}
+		<div class="row">
+			<div class="col-md-6">
+				<div class="mb-3 ">
+					<label for="testCase" class="form-label h4">Test Case:</label>
+					<input type="text" class="form-control" id="testCase" bind:value={testcase} />
+				</div>
 			</div>
-			<button class="btn btn-primary" type="submit">Run</button>
-		</form>
-		<div class="mb-3">
-			<label for="output" class="form-label h4">Output:</label>
-			<textarea class="form-control" id="output" disabled rows="1" bind:value={output} />
+			<div class="col-md-6">
+				<div class="mb-3">
+					<label for="output" class="form-label h4">Output:</label>
+					<textarea class="form-control" id="output" disabled rows="1" bind:value={output} />
+				</div>
+			</div>
 		</div>
+		<button class="btn btn-primary" type="button" on:click={runCode}>Run</button>
 	{:else}
 		<h1>Cannot set test case for design question</h1>
 	{/if}
 </div>
+
+<style>
+	button {
+		text-align: center;
+	}
+</style>

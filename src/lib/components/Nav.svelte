@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark ">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="/">Navbar</a>
 		<button
@@ -18,10 +18,13 @@
 					<a class="nav-link active" aria-current="page" href="/projects">Projects</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="/leetcode">Coding Challenges</a>
+					<a class="nav-link active" aria-current="page" href="/leetcode">Leetcode</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link active" aria-current="page" href="/blog">My Blog</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="/resume">Resume</a>
 				</li>
 			</ul>
 		</div>
@@ -31,5 +34,6 @@
 <style>
 	nav {
 		z-index: 100;
+		background-color: #212529;
 	}
 </style>
