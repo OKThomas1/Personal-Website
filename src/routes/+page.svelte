@@ -10,7 +10,7 @@
 		window.$("html, body").css({
 			overflow: "hidden"
 		});
-		await import("./jquery.pagepiling.js");
+		await import("$lib/util/jquery.pagepiling.js");
 		await import("pagepiling.js/jquery.pagepiling.css");
 		window.$("#pagepiling").pagepiling({
 			navigation: {

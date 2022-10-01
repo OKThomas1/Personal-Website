@@ -55,7 +55,7 @@
 		</div>
 		<button class="btn btn-primary" type="button" on:click={runCode}>Run</button>
 	{:else}
-		<h1>Cannot set test case for design question</h1>
+		<h1>Cannot set test case for this question</h1>
 	{/if}
 </div>
 
