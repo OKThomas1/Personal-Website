@@ -25,6 +25,7 @@
 </script>
 
 <div class="container mt-4">
+	<a href="/admin/leetcode/create" class="btn btn-primary mb-3">Add a new problem manually</a>
 	<div class="row">
 		{#each data.posts as post}
 			<div class="mb-4">

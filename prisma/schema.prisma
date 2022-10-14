@@ -15,3 +15,21 @@ model leetcode {
   name       String? @db.VarChar(100)
   problem    String? @db.VarChar(5000)
 }
+
+model blog {
+  id      Int       @id @default(autoincrement())
+  title   String?   @db.VarChar(100)
+  body    String?   @db.VarChar(10000)
+  ts      DateTime? @default(now()) @db.Timestamp(0)
+  comment comment[]
+}
+
+model comment {
+  id     Int     @id @default(autoincrement())
+  author String? @db.VarChar(20)
+  body   String? @db.VarChar(1000)
+  post   Int?
+  blog   blog?   @relation(fields: [post], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "comment_ibfk_1")
+
+  @@index([post], map: "post")
+}

@@ -1,5 +1,5 @@
-import preprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-auto';
+import preprocess from "svelte-preprocess";
+import adapter from "@sveltejs/adapter-auto";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -10,7 +10,7 @@ const config = {
 	preprocess: [
 		preprocess({
 			scss: {
-				prependData: '@use "src/variables.scss" as *;'
+				prependData: '@use "src/lib/bootstrap/variables.scss" as *;'
 			}
 		})
 	]
