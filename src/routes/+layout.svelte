@@ -21,7 +21,7 @@
 	</main>
 </div>
 
-<style>
+<style global>
 	footer {
 		position: absolute;
 		bottom: 0;
@@ -38,5 +38,8 @@
 		position: relative;
 		padding-bottom: 5rem;
 		min-height: 100vh;
+	}
+	.mb {
+		margin-bottom: 5rem;
 	}
 </style>

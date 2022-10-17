@@ -3,10 +3,14 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 export async function load({ params }) {
-	const posts = await prisma.blog.findMany();
+	const post = await prisma.blog.findUnique({
+		where: {
+			id: parseInt(params.slug)
+		}
+	});
 
-	if (posts) {
-		return { posts };
+	if (post) {
+		return post;
 	}
 
 	throw error(404, "Not found");

@@ -1,4 +1,4 @@
-<div class="bg-primary jumbotron d-flex h-100 align-items-center">
+<div class="bg-primary jumbotron d-flex h-100 align-items-center mb">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">

@@ -1,6 +1,6 @@
-<div class="bg-secondary jumbotron d-flex align-items-center h-100">
+<div class="bg-secondary jumbotron d-flex align-items-center h-100 mb">
 	<div class="container">
-		<h5>
+		<h5 class="mt-4">
 			You can go to the <a href="/projects">projects</a> page to see an interactive demo of my projects,
 			but here's a couple of my favourite:
 		</h5>
@@ -30,7 +30,7 @@
 			<div class="col-md-4">
 				<div class="card">
 					<div class="card-body">
-						<h5 class="card-title">TumbledMTG Website</h5>
+						<h5 class="card-title">Spotlight</h5>
 						<p class="card-text">A website I made</p>
 					</div>
 					<div class="card-body">
@@ -53,7 +53,7 @@
 			<div class="col-md-4">
 				<div class="card">
 					<div class="card-body">
-						<h5 class="card-title">TumbledMTG Website</h5>
+						<h5 class="card-title">Skull Online</h5>
 						<p class="card-text">A website I made</p>
 					</div>
 					<div class="card-body">

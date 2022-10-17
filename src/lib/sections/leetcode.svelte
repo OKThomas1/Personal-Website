@@ -1,4 +1,4 @@
-<div class="bg-danger jumbotron d-flex align-items-center h-100">
+<div class="bg-danger jumbotron d-flex align-items-center h-100 mb">
 	<div class="container">
 		<h5>
 			Every midnight, the most recent leetcode problems I have solved get scraped and uploaded to

@@ -9,7 +9,6 @@
 	import { browser } from "$app/environment";
 	import * as J from "jquery";
 	import { onMount, onDestroy } from "svelte";
-	import Leetcode from "../lib/sections/leetcode.svelte";
 	onMount(async () => {
 		window.$ = J;
 		window.$("html, body").css({
@@ -22,6 +21,7 @@
 				tooltips: ["Welcome", "About Me", "Skills", "Projects", "LeetCode", "Blog", "Contact Me"]
 			}
 		});
+		window.$("#pagepiling").fadeIn();
 	});
 
 	onDestroy(async () => {
@@ -33,7 +33,7 @@
 	});
 </script>
 
-<div id="pagepiling">
+<div id="pagepiling" class="hide">
 	<div class="section"><Welcome /></div>
 	<div class="section"><About /></div>
 	<div class="section"><Skills /></div>
@@ -44,4 +44,7 @@
 </div>
 
 <style>
+	.hide {
+		display: none;
+	}
 </style>
