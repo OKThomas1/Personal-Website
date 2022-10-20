@@ -4,7 +4,7 @@
 	let output = "";
 
 	const runCode = () => {
-		let code = data.solution.split(" = ");
+		let code = data.solution.split("*/").at(-1).split(" = ");
 		code.shift();
 		code = code.join(" = ");
 		code = code.substring(8);

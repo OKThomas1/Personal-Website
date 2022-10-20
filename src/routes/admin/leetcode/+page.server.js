@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 export async function load() {
-	const posts = await prisma.leetcode.findMany();
+	const posts = await prisma.leetcode.findMany({ orderBy: [{ id: "desc" }] });
 
 	if (posts) {
 		return {

@@ -1,4 +1,4 @@
-<div class="bg-secondary jumbotron d-flex align-items-center h-100 mb">
+<div class="bg-info jumbotron d-flex align-items-center h-100 mb">
 	<div class="container">
 		<h5 class="mt-4">
 			You can go to the <a href="/projects">projects</a> page to see an interactive demo of my projects,

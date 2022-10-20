@@ -1,11 +1,13 @@
 <script>
+	const POSTS_PER_PAGE = 12;
 	export let data;
+	let page = 0;
 </script>
 
 <div class="container mt-4">
 	<div class="row">
-		{#each Object.values(data) as post}
-			<div class="col-md-4 mb-3">
+		{#each data.posts.slice(page * POSTS_PER_PAGE, (page + 1) * POSTS_PER_PAGE) as post}
+			<div class="col-xl-4 col-lg-6 col-md-12 mb-3">
 				<div class="card">
 					<div class="card-body">
 						<a href="/leetcode/{post.id}">
@@ -25,7 +27,22 @@
 				</div>
 			</div>
 		{/each}
+		<style>
+			p {
+				margin: 0px !important;
+			}
+		</style>
 	</div>
+	{#if data.posts.length > POSTS_PER_PAGE / 2}
+		<div class="text-center">
+			<button class="btn btn-primary" disabled={page === 0} on:click={() => page--}>Prev</button>
+			<button
+				class="btn btn-primary"
+				disabled={(page + 1) * POSTS_PER_PAGE >= data.posts.length}
+				on:click={() => page++}>Next</button
+			>
+		</div>
+	{/if}
 </div>
 
 <style>

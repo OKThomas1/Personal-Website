@@ -9,10 +9,10 @@ datasource db {
 
 model leetcode {
   id         Int     @id @default(autoincrement())
-  testcase   String? @db.VarChar(100)
+  testcase   String? @db.VarChar(1000)
   solution   String? @db.VarChar(10000)
   difficulty Int?
-  name       String? @db.VarChar(100)
+  name       String? @unique(map: "name") @db.VarChar(100)
   problem    String? @db.VarChar(5000)
 }
 

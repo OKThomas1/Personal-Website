@@ -1,6 +1,5 @@
 <script>
 	const openFullscreen = () => {
-		console.log("asd");
 		let elem = document.getElementById("portfolio");
 		if (elem.requestFullscreen) elem.requestFullscreen();
 		else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
