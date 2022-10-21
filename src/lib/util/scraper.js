@@ -19,9 +19,7 @@ export default async function scrape() {
 		await page.setCookie(...cookies);
 		await page.goto(url, { waitUntil: "load" });
 		await page.waitForSelector(selector, { timeout: 10000 });
-		const body = await page.evaluate(() => {
-			return document.querySelector("body").innerHTML;
-		});
+		const body = await page.evaluate(() => document.querySelector("body").innerHTML);
 		cookies = await page.cookies();
 		await page.close();
 		return body;
@@ -36,9 +34,9 @@ export default async function scrape() {
 		let name = problem.children[0].children[0].children[0].data;
 		if (name.includes("Design")) continue;
 		let date = problem.children[0].children[1].children[0].data;
-		if (date.includes("days ago") || date.includes("months ago")) break;
-		let url = problem.attribs.href;
-		let submission = await getData(BASE_URL + url, "#result_language");
+		if (date.includes("a day ago") || date.includes("days ago") || date.includes("months ago"))
+			break;
+		let submission = await getData(BASE_URL + problem.attribs.href, "#result_language");
 		//let submission = fs.readFileSync("./cache2.html");
 		c = cheerio.load(submission);
 		let lines = c(".ace_text-layer")[0].children;
@@ -46,8 +44,7 @@ export default async function scrape() {
 		for (const line of lines) {
 			solution += c(line).text() + "\n";
 		}
-		url = c(".inline-wrap")[0].attribs.href;
-		let question = await getData(BASE_URL + url, ".CodeMirror");
+		let question = await getData(BASE_URL + c(".inline-wrap")[0].attribs.href, ".CodeMirror");
 		//let question = fs.readFileSync("./cache3.html");
 		c = cheerio.load(question);
 		let content = c("div[data-key='description-content']")[0];

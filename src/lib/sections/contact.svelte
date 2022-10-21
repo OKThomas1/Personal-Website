@@ -1,5 +1,7 @@
 <script>
-	const submit = (event) => {};
+	const submit = (event) => {
+		console.log(event);
+	};
 </script>
 
 <div class="bg-success jumbotron d-flex align-items-center h-100 mb">
@@ -15,6 +17,7 @@
 						placeholder="Name"
 						name="name"
 						autocomplete="off"
+						required
 					/>
 					<label for="name">Name</label>
 				</div>
@@ -26,6 +29,7 @@
 						placeholder="name@example.com"
 						name="email"
 						autocomplete="off"
+						required
 					/>
 					<label for="email">Email</label>
 				</div>
@@ -35,6 +39,7 @@
 						placeholder="Leave your message here"
 						id="message"
 						name="message"
+						required
 					/>
 					<label for="message">Message</label>
 				</div>
