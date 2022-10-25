@@ -10,6 +10,7 @@
 	import { onMount, onDestroy } from "svelte";
 	onMount(async () => {
 		window.$ = J;
+		if (window.$.default) window.$ = window.$.default;
 		window.$("html, body").css({
 			overflow: "hidden"
 		});
