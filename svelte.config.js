@@ -5,7 +5,7 @@ const PROD = false;
 
 const config = {
 	kit: {
-		adapter: PROD ? nodeAdapter({ out: "build" }) : adapter()
+		adapter: PROD ? nodeAdapter.default({ out: "build" }) : adapter()
 	},
 
 	preprocess: [
