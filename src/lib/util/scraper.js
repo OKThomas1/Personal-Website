@@ -27,7 +27,6 @@ export default async function scrape() {
 	let questions = [];
 
 	let data = await getData(BASE_URL + "/OkThomas", "a.h-\\[56px\\]");
-	//let data = fs.readFileSync("../../../cache.html");
 	let c = cheerio.load(data);
 	let problems = c("a.h-\\[56px\\]");
 	for (const problem of problems) {
@@ -37,7 +36,6 @@ export default async function scrape() {
 		if (date.includes("a day ago") || date.includes("days ago") || date.includes("months ago"))
 			break;
 		let submission = await getData(BASE_URL + problem.attribs.href, "#result_language");
-		//let submission = fs.readFileSync("./cache2.html");
 		c = cheerio.load(submission);
 		let lines = c(".ace_text-layer")[0].children;
 		let solution = "";
@@ -45,7 +43,6 @@ export default async function scrape() {
 			solution += c(line).text() + "\n";
 		}
 		let question = await getData(BASE_URL + c(".inline-wrap")[0].attribs.href, ".CodeMirror");
-		//let question = fs.readFileSync("./cache3.html");
 		c = cheerio.load(question);
 		let content = c("div[data-key='description-content']")[0];
 		let difficulty = map[c(content.children[0].children[0].children[1].children[0]).text()];

@@ -7,16 +7,31 @@
 	});
 
 	import Nav from "$lib/components/Nav.svelte";
+	import Fa from "svelte-fa";
+	import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons/index.js";
+	import { faEnvelope } from "@fortawesome/free-solid-svg-icons/index.js";
 </script>
 
-<div id="parent" class="d-flex flex-column h-100">
+<div id="parent">
 	<header><Nav /></header>
 	<footer>
 		<div id="footer">
-			<h1>Links to socials probably</h1>
+			<a href="https://github.com/OKThomas1" target="_blank" rel="noopener noreferrer"
+				><Fa icon={faGithub} /></a
+			>
+			<a
+				href="https://www.linkedin.com/in/thomas-buchholz-3b952422a/"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				<Fa icon={faLinkedin} />
+			</a>
+			<a href="mailto:thomas.buchholz111@gmail.com" target="_blank" rel="noopener noreferrer"
+				><Fa icon={faEnvelope} /></a
+			>
 		</div>
 	</footer>
-	<main class="d-flex flex-column h-100 flex-grow-1">
+	<main>
 		<slot />
 	</main>
 </div>
@@ -26,7 +41,7 @@
 		position: absolute;
 		bottom: 0;
 		width: 100%;
-		height: 5rem;
+		height: 3.5rem;
 		text-align: center;
 		z-index: 100;
 		display: flex;
@@ -36,10 +51,19 @@
 	}
 	#parent {
 		position: relative;
-		padding-bottom: 5rem;
+		padding-bottom: 3.5rem;
 		min-height: 100vh;
 	}
 	.mb {
-		margin-bottom: 5rem;
+		padding-bottom: 3.5rem;
+	}
+	svg {
+		margin-left: 30px;
+		margin-right: 30px;
+		font-size: 36px;
+		color: black;
+	}
+	.test {
+		height: calc(100% - 56px);
 	}
 </style>

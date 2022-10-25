@@ -1,8 +1,14 @@
 <script>
+	import { onMount } from "svelte";
 	export let data;
 	let testcase = data.testcase;
 	let output = "";
-
+	onMount(
+		() =>
+			(document.getElementById("test").innerHTML = document
+				.getElementById("test")
+				.innerHTML.replace(/&nbsp;/g, ""))
+	);
 	const runCode = () => {
 		let code = data.solution.split("*/").at(-1).split(" = ");
 		code.shift();
@@ -35,7 +41,7 @@
 		</div>
 		<div class="col-md-6 p-4 border border-primary">
 			<h5>My Solution:</h5>
-			<pre>{data.solution}</pre>
+			<pre id="test">{data.solution}</pre>
 		</div>
 	</div>
 	{#if !data.name.includes("Design") && data.testcase !== "false"}

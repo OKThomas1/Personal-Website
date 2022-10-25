@@ -33,16 +33,14 @@
 			}
 		</style>
 	</div>
-	{#if data.posts.length > POSTS_PER_PAGE / 2}
-		<div class="text-center">
-			<button class="btn btn-primary" disabled={page === 0} on:click={() => page--}>Prev</button>
-			<button
-				class="btn btn-primary"
-				disabled={(page + 1) * POSTS_PER_PAGE >= data.posts.length}
-				on:click={() => page++}>Next</button
-			>
-		</div>
-	{/if}
+	<div class="text-center">
+		<button class="btn btn-primary" disabled={page === 0} on:click={() => page--}>Prev</button>
+		<button
+			class="btn btn-primary"
+			disabled={(page + 1) * POSTS_PER_PAGE >= data.posts.length}
+			on:click={() => page++}>Next</button
+		>
+	</div>
 </div>
 
 <style>
@@ -51,6 +49,7 @@
 		-webkit-line-clamp: 3;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
+		height: 72px;
 	}
 	.name {
 		display: -webkit-box;

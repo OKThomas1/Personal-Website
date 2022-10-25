@@ -4,7 +4,6 @@
 	import Skills from "$lib/sections/skills.svelte";
 	import Projects from "$lib/sections/projects.svelte";
 	import LeetCode from "$lib/sections/leetcode.svelte";
-	import Blog from "$lib/sections/blog.svelte";
 	import Contact from "$lib/sections/contact.svelte";
 	import { browser } from "$app/environment";
 	import * as J from "jquery";
@@ -15,10 +14,10 @@
 			overflow: "hidden"
 		});
 		await import("$lib/util/jquery.pagepiling.js");
-		await import("pagepiling.js/jquery.pagepiling.css");
+		await import("$lib/util/jquery.pagepiling.css");
 		window.$("#pagepiling").pagepiling({
 			navigation: {
-				tooltips: ["Welcome", "About Me", "Skills", "Projects", "LeetCode", "Blog", "Contact Me"]
+				tooltips: ["Welcome", "About Me", "Skills", "Projects", "LeetCode", "Contact Me"]
 			}
 		});
 		window.$("#pagepiling").fadeIn();
@@ -27,24 +26,20 @@
 	onDestroy(async () => {
 		if (!browser) return;
 		window.$("#pp-nav").remove();
-		window.$("html, body").css({
+		window.$("html").css({
 			overflow: "auto"
 		});
 	});
 </script>
 
 <div id="pagepiling" class="hide">
-	<div class="section"><Welcome /></div>
-	<div class="section"><About /></div>
-	<div class="section"><Skills /></div>
-	<div class="section"><Projects /></div>
-	<div class="section"><LeetCode /></div>
-	<div class="section"><Blog /></div>
-	<div class="section"><Contact /></div>
+	<div class="section bg-primary"><Welcome /></div>
+	<div class="section bg-secondary pp-scrollable "><About /></div>
+	<div class="section bg-dark pp-scrollable"><Skills /></div>
+	<div class="section bg-light pp-scrollable"><Projects /></div>
+	<div class="section bg-danger pp-scrollable"><LeetCode /></div>
+	<div class="section bg-success"><Contact /></div>
 </div>
 
 <style>
-	.hide {
-		display: none;
-	}
 </style>

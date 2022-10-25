@@ -20,7 +20,7 @@ export async function POST({ request }) {
 		body.email.length > 50 ||
 		body.message.length > 2000
 	) {
-		throw error(400, { error: "Bad request" });
+		throw error(400, { error: "Input too long." });
 	}
 	try {
 		let mailOptions = {
@@ -29,15 +29,18 @@ export async function POST({ request }) {
 			subject: `New message from ${body.name}`,
 			text: `${body.message}`
 		};
-		transporter.sendMail(mailOptions, function (error, info) {
-			if (error) {
-				console.log(error);
-				throw error(500, { error: "Could not send email" });
-			} else {
-				console.log("Email sent: " + info.response);
-				return json({ success: "Successfully sent email" });
-			}
+		await new Promise((resolve, reject) => {
+			transporter.sendMail(mailOptions, function (error, info) {
+				if (error) {
+					console.log(error);
+					reject();
+				} else {
+					console.log("Email sent: " + info.response);
+					resolve();
+				}
+			});
 		});
+		return json({ success: "Successfully sent email" });
 	} catch (err) {
 		console.error(err);
 		throw error(500, { error: "Error sending email" });

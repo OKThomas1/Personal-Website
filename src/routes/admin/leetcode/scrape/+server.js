@@ -12,7 +12,6 @@ export async function POST() {
 				name: question.name
 			}
 		});
-		console.log(exists, question.name);
 		if (exists) {
 			await prisma.leetcode.update({
 				where: {

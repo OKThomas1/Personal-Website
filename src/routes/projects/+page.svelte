@@ -7,15 +7,14 @@
 	};
 </script>
 
-<iframe
-	id="portfolio"
-	src="https://thomas-buchholz.web.app"
-	width="100%"
-	height="100%"
-	title="Projects"
-	class="flex-grow-1 container"
-/>
 <div class="container">
+	<iframe
+		id="portfolio"
+		src="https://portfolio.thomasbuchholz.dev"
+		width="100%"
+		height="100%"
+		title="Projects"
+	/>
 	<p>
 		This is an interactive demo of my projects, click <button
 			on:click={openFullscreen}
@@ -24,3 +23,12 @@
 		> to fullscreen.
 	</p>
 </div>
+
+<style>
+	div {
+		height: calc(100vh - 138px);
+	}
+	p {
+		margin-bottom: 0px;
+	}
+</style>

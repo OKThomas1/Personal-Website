@@ -5,7 +5,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark ">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="/">Navbar</a>
+		<a class="navbar-brand" href="/">Thomas Buchholz</a>
 		<button
 			class="navbar-toggler"
 			type="button"
@@ -23,7 +23,7 @@
 					<a class="nav-link active" aria-current="page" href="/projects">Interactive Portfolio</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="/leetcode">Leetcode</a>
+					<a class="nav-link active" aria-current="page" href="/leetcode">LeetCode</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link active" aria-current="page" href="/blog">My Blog</a>
