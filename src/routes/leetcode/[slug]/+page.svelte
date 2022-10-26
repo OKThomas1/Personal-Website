@@ -1,5 +1,7 @@
 <script>
 	import { onMount } from "svelte";
+	import _ from "lodash";
+	import { MinPriorityQueue, MaxPriorityQueue } from "@datastructures-js/priority-queue";
 	export let data;
 	let testcase = data.testcase;
 	let output = "";
@@ -14,10 +16,10 @@
 		code.shift();
 		code = code.join(" = ");
 		code = code.substring(8);
+		let fn = "";
 		try {
-			output = JSON.stringify(
-				new Function("return function test" + code)()(...JSON.parse(`[${testcase}]`))
-			);
+			eval("fn = function test" + code);
+			output = JSON.stringify(fn(...JSON.parse(`[${testcase}]`)));
 		} catch (err) {
 			console.error(err);
 			output = "Error, make sure you entered the test case correctly.";
@@ -61,7 +63,7 @@
 		</div>
 		<button class="btn btn-primary" type="button" on:click={runCode}>Run</button>
 	{:else}
-		<h1>Cannot set test case for this question</h1>
+		<h1>Cannot run test case for this question</h1>
 	{/if}
 </div>
 

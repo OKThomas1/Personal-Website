@@ -11,7 +11,7 @@
 		alert.innerHTML = "<p style='color: black;'>Sending...</p>";
 		axios
 			.post("/contact", { name: name.value, email: email.value, message: message.value })
-			.then(({ data }) => {
+			.then(() => {
 				sending = false;
 				event.target.reset();
 				alert.className = "alert alert-success mt-3 mb-3";

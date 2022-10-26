@@ -1,7 +1,7 @@
 <div class="container text-center mt-5">
 	<h1 class="display-1"><strong>About Me</strong></h1>
 	<br />
-	<h2 class="display-6">
+	<h3 class="display-7">
 		My name is Thomas, I am currently a 4th year student studying Computer Science and Data Science
 		at the University of British Columbia Okanagan.
 		<br />
@@ -12,5 +12,18 @@
 		<br />
 		If you would like to contact me, you can use the form on the last page, or use the links at the bottom
 		for LinkedIn and email.
-	</h2>
+	</h3>
 </div>
+
+<style>
+	@media (min-width: 1200px) {
+		.display-7 {
+			font-size: 2rem !important;
+		}
+	}
+	.display-7 {
+		font-size: calc(1.375rem + 1.5vw);
+		font-weight: 300;
+		line-height: 1.2;
+	}
+</style>
