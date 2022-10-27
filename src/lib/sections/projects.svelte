@@ -15,7 +15,7 @@
 						/>
 						On the website, users can browse Magic: the Gathering cards, upload decklists, view tournament
 						results and upcoming tournaments, and download the replays from the tournaments. The Discord
-						bot is responsible adding players to and starting weekly tournaments, and can also quickly
+						bot is responsible for adding players to and starting weekly tournaments, and can also quickly
 						display specific cards.
 					</p>
 				</div>
