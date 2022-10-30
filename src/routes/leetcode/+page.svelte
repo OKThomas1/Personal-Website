@@ -1,5 +1,5 @@
 <script>
-	const POSTS_PER_PAGE = 12;
+	const POSTS_PER_PAGE = 15;
 	export let data;
 	let page = 0;
 </script>

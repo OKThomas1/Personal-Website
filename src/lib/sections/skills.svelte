@@ -6,7 +6,7 @@
 <div class="container mt-5">
 	<h1 class="display-1"><strong>Skills</strong></h1>
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-lg-4 col-md-12">
 			<div class="card bg-dark">
 				<div class="card-body">
 					<h1 class="card-title">Frontend<Fa icon={faCode} /></h1>
@@ -22,7 +22,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-4">
+		<div class="col-lg-4 col-md-12">
 			<div class="card bg-dark">
 				<div class="card-body">
 					<h1 class="card-title">Backend<Fa icon={faServer} /></h1>
@@ -39,7 +39,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-4">
+		<div class="col-lg-4 col-md-12">
 			<div class="card bg-dark">
 				<div class="card-body">
 					<h1 class="card-title">Misc<Fa icon={faComputer} /></h1>
@@ -57,11 +57,14 @@
 </div>
 
 <style>
-	.col-md-4 {
+	.col-lg-4 {
+		padding: 0px;
+	}
+	.col-md-12 {
 		padding: 0px;
 	}
 	.card {
-		height: 350px;
+		min-height: 355px;
 	}
 	li {
 		line-height: 1.5;

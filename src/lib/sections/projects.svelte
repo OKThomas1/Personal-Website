@@ -6,7 +6,7 @@
 		complete list of my projects. <br /> <br /> These are 3 of my favourite projects.
 	</h3>
 	<div class="row">
-		<div class="col-md-4">
+		<div class="col-lg-12 col-xl-4 mb-3">
 			<div class="card">
 				<div class="card-body">
 					<h5 class="card-title">TumbledMTG Infrastructure</h5>
@@ -41,7 +41,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-4">
+		<div class="col-lg-12 col-xl-4 mb-3">
 			<div class="card">
 				<div class="card-body">
 					<h5 class="card-title">Spotlight</h5>
@@ -70,7 +70,7 @@
 			</div>
 		</div>
 
-		<div class="col-md-4">
+		<div class="col-lg-12 col-xl-4 mb-3">
 			<div class="card">
 				<div class="card-body">
 					<h5 class="card-title">Skull Online</h5>
@@ -103,7 +103,14 @@
 </div>
 
 <style>
-	.card {
-		height: 335px;
+	@media (min-width: 1200px) {
+		.card {
+			min-height: 395px;
+		}
+	}
+	@media (min-width: 1400px) {
+		.card {
+			min-height: 335px;
+		}
 	}
 </style>

@@ -10,8 +10,8 @@
 			{#each data.posts.slice(page * POSTS_PER_PAGE, (page + 1) * POSTS_PER_PAGE) as post}
 				<div class="card mb-4">
 					<div class="card-body">
-						<a href="/blog/{post.id}"> <h1>{post.title}</h1> </a>
-						<p>{post.body}</p>
+						<a href="/blog/{post.id}" class="name"> <h1>{post.title}</h1> </a>
+						<p class="blog">{post.body}</p>
 					</div>
 				</div>
 			{/each}
@@ -30,3 +30,18 @@
 		<h2>No blog posts</h2>
 	{/if}
 </div>
+
+<style>
+	.blog {
+		display: -webkit-box;
+		-webkit-line-clamp: 8;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	.name {
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+</style>
