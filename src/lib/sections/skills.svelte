@@ -64,11 +64,16 @@
 		padding: 0px;
 	}
 	.card {
-		min-height: 355px;
+		min-height: 360px;
+		border: 2px solid black;
+		margin: -1px;
 	}
 	li {
 		line-height: 1.5;
 		font-size: 1.3rem;
 		opacity: 0.7;
+	}
+	svg {
+		color: white;
 	}
 </style>

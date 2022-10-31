@@ -33,7 +33,7 @@
 			}
 		</style>
 	</div>
-	<div class="text-center">
+	<div class="text-center mb-3">
 		<button class="btn btn-primary" disabled={page === 0} on:click={() => page--}>Prev</button>
 		<button
 			class="btn btn-primary"

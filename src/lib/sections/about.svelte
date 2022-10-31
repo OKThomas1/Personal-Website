@@ -10,8 +10,13 @@
 		a Javascript course and immediately fell in love with coding.
 		<br />
 		<br />
-		If you would like to contact me, you can use the form on the last page, or use the links at the bottom
-		for LinkedIn and email.
+		You can reach me via LinkedIn or email using the links at the bottom, or by using the
+		<button
+			class="btn btn-link align-baseline p-0 m-0 display-7"
+			type="button"
+			on:click={() => window.$.fn.pagepiling.moveTo(6)}>contact form</button
+		>
+		on the last page.
 	</h3>
 </div>
 

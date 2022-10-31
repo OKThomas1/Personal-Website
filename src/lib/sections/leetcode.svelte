@@ -7,8 +7,8 @@
 	</div>
 	<h4 class="mt-4 mb-4 text-center">
 		Leetcoding is one of my favourite hobbies. Every night at midnight, the most recent leetcode
-		problems I have solved get scraped and uploaded to this website to view. <br /> You can go to
-		the
+		problems I have solved get scraped and uploaded to this website to view. <br /><br /> You can go
+		to the
 		<a href="/leetcode">LeetCode</a>
 		page to view a larger list of problems I have solved, but here are a couple of my favourites.
 	</h4>
@@ -75,7 +75,7 @@
 	}
 	@media (min-width: 1400px) {
 		.card {
-			min-height: 225px;
+			min-height: 220px;
 		}
 	}
 </style>
