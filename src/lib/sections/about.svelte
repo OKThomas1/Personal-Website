@@ -21,13 +21,8 @@
 </div>
 
 <style>
-	@media (min-width: 1200px) {
-		.display-7 {
-			font-size: 2rem !important;
-		}
-	}
 	.display-7 {
-		font-size: calc(1.375rem + 1.5vw);
+		font-size: calc(1.375rem + 1.15vw);
 		font-weight: 300;
 		line-height: 1.2;
 	}

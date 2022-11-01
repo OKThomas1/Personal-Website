@@ -44,4 +44,8 @@
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 	}
+	.card {
+		border-radius: 10px !important;
+		border: 2px solid black;
+	}
 </style>

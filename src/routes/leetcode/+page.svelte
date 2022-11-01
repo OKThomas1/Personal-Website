@@ -1,5 +1,5 @@
 <script>
-	const POSTS_PER_PAGE = 15;
+	const POSTS_PER_PAGE = 18;
 	export let data;
 	let page = 0;
 </script>
@@ -56,5 +56,10 @@
 		-webkit-line-clamp: 1;
 		-webkit-box-orient: vertical;
 		overflow: hidden;
+	}
+	.card {
+		border-radius: 10px !important;
+		border: 2px solid black;
+		background-color: #184160;
 	}
 </style>

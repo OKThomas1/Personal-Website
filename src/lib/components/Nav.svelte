@@ -4,8 +4,9 @@
 </script>
 
 <nav class="navbar navbar-expand-lg navbar-dark ">
-	<div class="container-fluid">
+	<div class="container">
 		<a class="navbar-brand" href="/">Thomas Buchholz</a>
+		<div class="flex-grow-1" />
 		<button
 			class="navbar-toggler"
 			type="button"
@@ -26,7 +27,7 @@
 					<a class="nav-link active" aria-current="page" href="/leetcode">LeetCode</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="/blog">My Blog</a>
+					<a class="nav-link active" aria-current="page" href="/blog">Blog</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link active" aria-current="page" href="/resume">Resume</a>
@@ -57,6 +58,9 @@
 <style>
 	nav {
 		z-index: 100;
-		background-color: #212529;
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+	.navbar-collapse {
+		flex-grow: 0;
 	}
 </style>

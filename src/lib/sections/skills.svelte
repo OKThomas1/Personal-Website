@@ -4,12 +4,12 @@
 </script>
 
 <div class="container mt-5">
-	<h1 class="display-1"><strong>Skills</strong></h1>
+	<h1 class="display-1 text-center"><strong>Skills</strong></h1>
 	<div class="row">
-		<div class="col-lg-4 col-md-12">
-			<div class="card bg-dark">
+		<div class="col-lg-4 col-md-12 mb-3">
+			<div class="card ">
 				<div class="card-body">
-					<h1 class="card-title">Frontend<Fa icon={faCode} /></h1>
+					<h1 class="card-title">Frontend <Fa icon={faCode} style="color: white" /></h1>
 					<ul>
 						<li>React</li>
 						<li>Redux</li>
@@ -22,10 +22,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-4 col-md-12">
-			<div class="card bg-dark">
+		<div class="col-lg-4 col-md-12 mb-3">
+			<div class="card ">
 				<div class="card-body">
-					<h1 class="card-title">Backend<Fa icon={faServer} /></h1>
+					<h1 class="card-title">Backend <Fa icon={faServer} style="color: white" /></h1>
 					<ul>
 						<li>Express</li>
 						<li>Firebase</li>
@@ -39,10 +39,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-4 col-md-12">
-			<div class="card bg-dark">
+		<div class="col-lg-4 col-md-12 mb-3">
+			<div class="card ">
 				<div class="card-body">
-					<h1 class="card-title">Misc<Fa icon={faComputer} /></h1>
+					<h1 class="card-title">Misc <Fa icon={faComputer} style="color: white" /></h1>
 					<ul>
 						<li>Typescript</li>
 						<li>Git</li>
@@ -57,23 +57,15 @@
 </div>
 
 <style>
-	.col-lg-4 {
-		padding: 0px;
-	}
-	.col-md-12 {
-		padding: 0px;
-	}
 	.card {
 		min-height: 360px;
 		border: 2px solid black;
-		margin: -1px;
+		border-radius: 10px !important;
+		background-color: #184e77;
 	}
 	li {
 		line-height: 1.5;
 		font-size: 1.3rem;
 		opacity: 0.7;
-	}
-	svg {
-		color: white;
 	}
 </style>

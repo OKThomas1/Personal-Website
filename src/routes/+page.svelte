@@ -34,16 +34,34 @@
 </script>
 
 <div id="pagepiling" class="hide">
-	<div class="section bg-primary"><Welcome /></div>
-	<div class="section bg-secondary pp-scrollable "><About /></div>
-	<div class="section bg-dark pp-scrollable"><Skills /></div>
-	<div class="section bg-light pp-scrollable"><Projects /></div>
-	<div class="section bg-danger pp-scrollable"><LeetCode /></div>
-	<div class="section bg-success"><Contact /></div>
+	<div class="section pg-1"><Welcome /></div>
+	<div class="section pg-2 pp-scrollable"><About /></div>
+	<div class="section pg-3 pp-scrollable"><Skills /></div>
+	<div class="section pg-4 pp-scrollable"><Projects /></div>
+	<div class="section pg-5 pp-scrollable"><LeetCode /></div>
+	<div class="section pg-6"><Contact /></div>
 </div>
 
 <style>
 	.hide {
 		display: none;
+	}
+	.pg-1 {
+		background-color: #184e77;
+	}
+	.pg-2 {
+		background-color: #1e6091;
+	}
+	.pg-3 {
+		background-color: #1a759f;
+	}
+	.pg-4 {
+		background-color: #168aad;
+	}
+	.pg-5 {
+		background-color: #34a0a4;
+	}
+	.pg-6 {
+		background-color: #52b69a;
 	}
 </style>

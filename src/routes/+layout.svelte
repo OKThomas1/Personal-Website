@@ -17,17 +17,17 @@
 	<footer>
 		<div id="footer">
 			<a href="https://github.com/OKThomas1" target="_blank" rel="noopener noreferrer"
-				><Fa icon={faGithub} /></a
+				><Fa icon={faGithub} style="margin-left: 30px; margin-right: 30px" /></a
 			>
 			<a
 				href="https://www.linkedin.com/in/thomas-buchholz-3b952422a/"
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<Fa icon={faLinkedin} />
+				<Fa icon={faLinkedin} style="margin-left: 30px; margin-right: 30px" />
 			</a>
 			<a href="mailto:thomas.buchholz111@gmail.com" target="_blank" rel="noopener noreferrer"
-				><Fa icon={faEnvelope} /></a
+				><Fa icon={faEnvelope} style="margin-left: 30px; margin-right: 30px" /></a
 			>
 		</div>
 	</footer>
@@ -58,12 +58,14 @@
 		padding-bottom: 3.5rem;
 	}
 	svg {
-		margin-left: 30px;
-		margin-right: 30px;
 		font-size: 36px;
 		color: black;
 	}
 	.test {
 		height: calc(100% - 56px);
+	}
+	#pp-nav span,
+	.pp-slidesNav li {
+		box-sizing: content-box !important;
 	}
 </style>

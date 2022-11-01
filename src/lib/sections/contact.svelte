@@ -31,7 +31,7 @@
 
 <div class="container">
 	<div id="bubble">
-		<h1 class="display-5"><strong>Contact Me</strong></h1>
+		<h1 class="display-5 text-center"><strong>Contact Me</strong></h1>
 		<form on:submit|preventDefault={submit}>
 			<div class="form-floating mb-3">
 				<input
@@ -90,6 +90,7 @@
 	#bubble {
 		background-color: white;
 		border-radius: 10px;
+		border: 2px solid black;
 		padding: 20px;
 	}
 </style>

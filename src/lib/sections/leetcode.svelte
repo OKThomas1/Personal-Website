@@ -68,6 +68,11 @@
 </div>
 
 <style>
+	.card {
+		border-radius: 10px !important;
+		border: 2px solid black;
+		background-color: #184160;
+	}
 	@media (min-width: 1200px) {
 		.card {
 			min-height: 265px;
