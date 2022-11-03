@@ -41,7 +41,7 @@
 			<h5>Problem:</h5>
 			{@html data.problem}
 		</div>
-		<div class="col-md-12 col-lg-6 p-4 border border-primary">
+		<div class="col-md-12 col-lg-6 p-4 border border-dark bg-darker">
 			<h5>My Solution:</h5>
 			<pre id="test">{data.solution}</pre>
 		</div>
@@ -70,5 +70,8 @@
 <style>
 	button {
 		text-align: center;
+	}
+	.bg-darker {
+		background-color: #0f2537;
 	}
 </style>
