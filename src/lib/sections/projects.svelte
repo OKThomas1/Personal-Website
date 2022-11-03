@@ -1,9 +1,10 @@
 <div class="container mt-5">
 	<h1 class="display-1 text-center"><strong>Projects</strong></h1>
 	<h3 class="text-center mb-3">
-		You can go to the <a href="/projects">projects</a> page to see an interactive demo of my biggest
-		projects, or you can go to my <a href="https://github.com/OKThomas1">Github</a> to see a more
-		complete list of my projects. <br /> <br /> These are 3 of my favourite projects.
+		You can go to the <a href="/projects" target="_blank" rel="noopener noreferrer">projects</a>
+		page to see an interactive demo of my biggest projects, or you can go to my
+		<a href="https://github.com/OKThomas1" target="_blank" rel="noopener noreferrer">Github</a>
+		to see a more complete list of my projects. <br /> <br /> These are 3 of my favourite projects.
 	</h3>
 	<div class="row">
 		<div class="col-lg-12 col-xl-4 mb-3">

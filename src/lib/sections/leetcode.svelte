@@ -16,7 +16,7 @@
 		<div class="col-xl-4 col-lg-12 mb-3">
 			<div class="card">
 				<div class="card-body">
-					<a href="/leetcode/33">
+					<a href="/leetcode/33" target="_blank" rel="noopener noreferrer">
 						<h5 class="card-title name">Patching Array</h5>
 					</a>
 					<h6 class="card-subtitle text-danger">Hard</h6>
@@ -31,7 +31,7 @@
 		<div class="col-xl-4 col-lg-12 mb-3">
 			<div class="card">
 				<div class="card-body">
-					<a href="/leetcode/37">
+					<a href="/leetcode/37" target="_blank" rel="noopener noreferrer">
 						<h5 class="card-title name">
 							Maximum Length of a Concatenated String with Unique Characters
 						</h5>
@@ -50,7 +50,7 @@
 		<div class="col-xl-4 col-lg-12 mb-3">
 			<div class="card">
 				<div class="card-body">
-					<a href="/leetcode/19">
+					<a href="/leetcode/19" target="_blank" rel="noopener noreferrer">
 						<h5 class="card-title name">Minimum Number of Operations to Make Array Continuous</h5>
 					</a>
 					<h6 class="card-subtitle text-danger">Hard</h6>

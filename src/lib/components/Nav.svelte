@@ -27,9 +27,6 @@
 					<a class="nav-link active" aria-current="page" href="/leetcode">LeetCode</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="/blog">Blog</a>
-				</li>
-				<li class="nav-item">
 					<a class="nav-link active" aria-current="page" href="/resume">Resume</a>
 				</li>
 				{#if admin}

@@ -12,6 +12,11 @@
 	import { faEnvelope } from "@fortawesome/free-solid-svg-icons/index.js";
 </script>
 
+<svelte:head>
+	<title>Thomas Buchholz</title>
+	<meta name="description" content="Thomas Buchholz | Fullstack Developer" />
+</svelte:head>
+
 <div id="parent">
 	<header><Nav /></header>
 	<footer>

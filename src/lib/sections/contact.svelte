@@ -67,7 +67,9 @@
 				/>
 				<label for="message">Message</label>
 			</div>
-			<button class="btn btn-primary" type="submit">Submit</button>
+			<div class="text-center">
+				<button class="btn btn-primary btn-grad" type="submit">Submit</button>
+			</div>
 			<div id="alert" />
 		</form>
 	</div>
@@ -92,5 +94,25 @@
 		border-radius: 10px;
 		border: 2px solid black;
 		padding: 20px;
+	}
+
+	.btn-grad {
+		background-image: linear-gradient(to right, #184e77 0%, #52b69a 51%, #d9ed92 100%);
+		margin: 10px;
+		width: 33%;
+		padding: 10px;
+		text-align: center;
+		text-transform: uppercase;
+		transition: 0.5s;
+		background-size: 200% auto;
+		color: white;
+		box-shadow: 0 0 20px #eee;
+		border-radius: 10px;
+	}
+
+	.btn-grad:hover {
+		background-position: right center; /* change the direction of the change here */
+		color: #fff;
+		text-decoration: none;
 	}
 </style>
