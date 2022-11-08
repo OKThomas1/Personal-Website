@@ -9,9 +9,9 @@ const map = {
 	Hard: 2
 };
 
-export default async function scrape() {
+export default async function scrape(cookies) {
+	if (fs.existsSync("cookies.json")) cookies = JSON.parse(fs.readFileSync("cookies.json"));
 	const browser = await puppeteer.launch();
-	let cookies = JSON.parse(fs.readFileSync("./cookies.json"));
 	console.log("scraping");
 	const getData = async (url, selector) => {
 		console.log(url);
@@ -19,7 +19,7 @@ export default async function scrape() {
 		await page.setCookie(...cookies);
 		await page.goto(url, { waitUntil: "load" });
 		await page.waitForSelector(selector, { timeout: 10000 });
-		const body = await page.evaluate(() => document.querySelector("body").innerHTML);
+		const body = await page.evaluate(() => document.querySelector("html").innerHTML);
 		cookies = await page.cookies();
 		await page.close();
 		return body;
@@ -35,21 +35,20 @@ export default async function scrape() {
 		let date = problem.children[0].children[1].children[0].data;
 		if (date.includes("a day ago") || date.includes("days ago") || date.includes("months ago"))
 			break;
-		let submission = await getData(BASE_URL + problem.attribs.href, "#result_language");
+		let submission = await getData(BASE_URL + problem.attribs.href, ".language-javascript");
 		c = cheerio.load(submission);
-		let lines = c(".ace_text-layer")[0].children;
+		let lines = c("code")[0].children;
 		let solution = "";
 		for (const line of lines) {
-			solution += c(line).text() + "\n";
+			solution += c(line).text();
 		}
-		let question = await getData(BASE_URL + c(".inline-wrap")[0].attribs.href, ".CodeMirror");
+		let question = await getData(c("meta[property='og:url']")[0].attribs.content, "code");
 		c = cheerio.load(question);
-		let content = c("div[data-key='description-content']")[0];
-		let difficulty = map[c(content.children[0].children[0].children[1].children[0]).text()];
-		let p = c(content.children[0].children[1]).html();
+		let difficulty = map[c(c("div.rounded-\\[21px\\]")[0]).text()];
+		let p = c(c("div[class='px-5 pt-4']")[0].children[0]).html();
 		questions.push({ name, solution, problem: p, testcase: "", difficulty });
 	}
-	fs.writeFileSync("./cookies.json", JSON.stringify(cookies));
+	fs.writeFileSync("cookies.json", JSON.stringify(cookies));
 	await browser.close();
 	return questions;
 }
