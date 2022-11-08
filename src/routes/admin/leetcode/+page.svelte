@@ -22,10 +22,25 @@
 				console.error(err);
 			});
 	};
+
+	const scrape = () => {
+		axios
+			.post("/admin/leetcode/scrape")
+			.then(() => {
+				console.log("success");
+			})
+			.catch((err) => {
+				console.error(err);
+			});
+	};
 </script>
 
 <div class="container mt-4">
 	<a href="/admin/leetcode/create" class="btn btn-primary mb-3">Add a new problem manually</a>
+	<br />
+	<button class="btn btn-primary mb-3" type="button" on:click={scrape}
+		>Scrape newest problems</button
+	>
 	<div class="row">
 		{#each data.posts as post}
 			<div class="mb-4">

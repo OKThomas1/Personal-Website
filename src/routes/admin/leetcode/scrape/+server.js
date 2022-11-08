@@ -1,11 +1,12 @@
 import { json } from "@sveltejs/kit";
 import scrape from "$lib/util/scraper";
 import { PrismaClient } from "@prisma/client";
+import cookies from "$lib/util/cookies.json";
 const prisma = new PrismaClient();
 
 export async function POST() {
 	console.log("received");
-	let data = await scrape();
+	let data = await scrape(cookies);
 	for (const question of data) {
 		let exists = await prisma.leetcode.findUnique({
 			where: {
