@@ -4,4 +4,4 @@ My name is Thomas Buchholz, and this is my [personal website](https://thomasbuch
 
 You can learn about me, view my interactive portfolio, browse my LeetCode solutions, or view my resume.
 
-Built with SvelteKit and Bootstrap.
+Built with SvelteKit, Bootstrap, Prisma, and MySQL.
