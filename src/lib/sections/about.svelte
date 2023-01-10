@@ -2,8 +2,8 @@
 	<h1 class="display-1"><strong>About Me</strong></h1>
 	<br />
 	<h3 class="display-7">
-		My name is Thomas, I am currently a 4th year student studying Computer Science and Data Science
-		at the University of British Columbia Okanagan.
+		My name is Thomas, I am recent graduate from the University of British Columbia Okanagan with a
+		bachelor's in Computer Science and a minor in Data Science.
 		<br />
 		<br />
 		When I was young I really liked math and spent a lot of time on Khan Academy. One day I came across

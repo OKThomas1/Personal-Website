@@ -33,8 +33,8 @@ export default async function scrape(cookies) {
 		let name = problem.children[0].children[0].children[0].data;
 		if (name.includes("Design")) continue;
 		let date = problem.children[0].children[1].children[0].data;
-		if (date.includes("a day ago") || date.includes("days ago") || date.includes("months ago"))
-			break;
+		//if (date.includes("a day ago") || date.includes("days ago") || date.includes("months ago"))
+		//break;
 		let submission = await getData(BASE_URL + problem.attribs.href, ".language-javascript");
 		c = cheerio.load(submission);
 		let lines = c("code")[0].children;
@@ -47,6 +47,7 @@ export default async function scrape(cookies) {
 		let difficulty = map[c(c("div.rounded-\\[21px\\]")[0]).text()];
 		let p = c(c("div[class='px-5 pt-4']")[0].children[0]).html();
 		questions.push({ name, solution, problem: p, testcase: "", difficulty });
+		await new Promise((resolve) => setTimeout(resolve, 7000));
 	}
 	fs.writeFileSync("cookies.json", JSON.stringify(cookies));
 	await browser.close();

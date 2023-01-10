@@ -5,6 +5,10 @@
 </script>
 
 <div class="container mt-4">
+	<p class="text-center h4 mb-3">
+		Click on a problem to see my solution, input custom test cases, and run my solution in the
+		browser.
+	</p>
 	<div class="row">
 		{#each data.posts.slice(page * POSTS_PER_PAGE, (page + 1) * POSTS_PER_PAGE) as post}
 			<div class="col-xl-4 col-lg-6 col-md-12 mb-3">

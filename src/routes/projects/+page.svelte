@@ -15,7 +15,7 @@
 		height="100%"
 		title="Projects"
 	/>
-	<p>
+	<p class="text-center">
 		This is an interactive demo of my projects, click <button
 			on:click={openFullscreen}
 			class="btn btn-link align-baseline p-0 m-0"
