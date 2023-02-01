@@ -14,7 +14,7 @@
 
 <svelte:head>
 	<title>Thomas Buchholz</title>
-	<meta name="description" content="Thomas Buchholz | Fullstack Developer" />
+	<meta name="description" content="Thomas Buchholz | Full-Stack Developer" />
 </svelte:head>
 
 <div id="parent">

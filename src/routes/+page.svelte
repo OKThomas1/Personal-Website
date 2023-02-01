@@ -5,6 +5,7 @@
 	import Projects from "$lib/sections/projects.svelte";
 	import LeetCode from "$lib/sections/leetcode.svelte";
 	import Contact from "$lib/sections/contact.svelte";
+	import Hackathons from "../lib/sections/hackathons.svelte";
 	import { browser } from "$app/environment";
 	import * as J from "jquery";
 	import { onMount, onDestroy } from "svelte";
@@ -18,7 +19,15 @@
 		await import("$lib/util/jquery.pagepiling.css");
 		window.$("#pagepiling").pagepiling({
 			navigation: {
-				tooltips: ["Welcome", "About Me", "Skills", "Projects", "LeetCode", "Contact Me"]
+				tooltips: [
+					"Welcome",
+					"About Me",
+					"Skills",
+					"Hackathons",
+					"Projects",
+					"LeetCode",
+					"Contact Me"
+				]
 			}
 		});
 		window.$("#pagepiling").fadeIn();
@@ -37,9 +46,10 @@
 	<div class="section pg-1"><Welcome /></div>
 	<div class="section pg-2 pp-scrollable"><About /></div>
 	<div class="section pg-3 pp-scrollable"><Skills /></div>
-	<div class="section pg-4 pp-scrollable"><Projects /></div>
-	<div class="section pg-5 pp-scrollable"><LeetCode /></div>
-	<div class="section pg-6"><Contact /></div>
+	<div class="section pg-4 pp-scrollable"><Hackathons /></div>
+	<div class="section pg-5 pp-scrollable"><Projects /></div>
+	<div class="section pg-6 pp-scrollable"><LeetCode /></div>
+	<div class="section pg-7"><Contact /></div>
 </div>
 
 <style>
@@ -63,5 +73,8 @@
 	}
 	.pg-6 {
 		background-color: #52b69a;
+	}
+	.pg-7 {
+		background-color: #76c893;
 	}
 </style>

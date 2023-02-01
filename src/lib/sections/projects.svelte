@@ -2,12 +2,12 @@
 	<h1 class="display-1 text-center"><strong>Projects</strong></h1>
 	<h3 class="text-center mb-3">
 		You can go to the <a href="/projects" target="_blank" rel="noopener noreferrer">projects</a>
-		page to see an interactive demo of my biggest projects, or you can go to my
+		page to view an interactive walk-through of my 6 biggest projects, or you can go to my
 		<a href="https://github.com/OKThomas1" target="_blank" rel="noopener noreferrer">Github</a>
-		to see a more complete list of my projects. <br /> <br /> These are 3 of my favourite projects.
+		to view a more complete list of my projects. <br /> <br /> These are 3 of my favourite projects.
 	</h3>
 	<div class="row">
-		<div class="col-lg-12 col-xl-4 mb-3">
+		<div class="col-xl-12 col-xxl-4 mb-3">
 			<div class="card">
 				<div class="card-body">
 					<h5 class="card-title">TumbledMTG Infrastructure</h5>
@@ -21,6 +21,9 @@
 					</p>
 				</div>
 				<div class="card-footer">
+					<p class="card-text">
+						<small class="text-muted">Built with React, Firebase, Bootstrap, MySQL</small>
+					</p>
 					<a
 						href="https://github.com/OKThomas1/TumbledMTG-Website"
 						class="card-link"
@@ -42,7 +45,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-lg-12 col-xl-4 mb-3">
+		<div class="col-xl-12 col-xxl-4 mb-3">
 			<div class="card">
 				<div class="card-body">
 					<h5 class="card-title">Spotlight</h5>
@@ -54,7 +57,10 @@
 						songs, albums, and artists.
 					</p>
 				</div>
-				<div class="card-footer">
+				<div class="card-footer ">
+					<p class="card-text ">
+						<small class="text-muted">Built with React, Redux, Firebase, Material-UI</small>
+					</p>
 					<a
 						href="https://github.com/ZachBourque/Spotify-Yellow"
 						class="card-link"
@@ -71,7 +77,7 @@
 			</div>
 		</div>
 
-		<div class="col-lg-12 col-xl-4 mb-3">
+		<div class="col-xl-12 col-xxl-4 mb-3">
 			<div class="card">
 				<div class="card-body">
 					<h5 class="card-title">Skull Online</h5>
@@ -80,11 +86,16 @@
 						lobbies, send messages to the lobby chat room, and join a lobby mid game to spectate.
 						'Skull & Roses is the quintessence of bluffing, a game in which everything is played in
 						the players' heads. Each player plays a face-down card, then each player in turn adds
-						one more card – until someone feels safe enough to state that he can turn a number of
+						one more card until someone feels safe enough to state that he can turn a number of
 						cards face up and get only roses.'
 					</p>
 				</div>
 				<div class="card-footer">
+					<p class="card-text">
+						<small class="text-muted"
+							>Built with React, Redux, Bootstrap, Phaser, Express, Socket.IO</small
+						>
+					</p>
 					<a
 						href="https://github.com/OKThomas1/Skull-Online"
 						class="card-link"
@@ -109,14 +120,10 @@
 		border: 2px solid black;
 		background-color: #184160;
 	}
-	@media (min-width: 1200px) {
-		.card {
-			min-height: 395px;
-		}
-	}
+
 	@media (min-width: 1400px) {
 		.card {
-			min-height: 335px;
+			min-height: 365px;
 		}
 	}
 </style>

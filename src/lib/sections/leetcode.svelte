@@ -31,7 +31,7 @@
 		<div class="col-xl-4 col-lg-12 mb-3">
 			<div class="card">
 				<div class="card-body">
-					<a href="/leetcode/37" target="_blank" rel="noopener noreferrer">
+					<a href="/leetcode/38" target="_blank" rel="noopener noreferrer">
 						<h5 class="card-title name">
 							Maximum Length of a Concatenated String with Unique Characters
 						</h5>
